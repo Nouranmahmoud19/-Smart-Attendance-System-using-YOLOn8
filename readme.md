@@ -28,3 +28,22 @@ The system logs attendance with timestamps in real time and saves processed fram
 ---
 
 ## 🏗️ Project Structure
+
+---
+
+## ⚙️ How It Works
+1. Load known employee faces from `employee_images/`
+2. Encode each face using `face_recognition`
+3. Process video frames with YOLOv8n-Face for face detection
+4. Match detected faces with known encodings
+5. Mark recognized faces in `Attendance_C3.csv`
+6. Save processed frames with bounding boxes and names
+
+---
+
+## 🧪 Example Output
+✅ **Recognized Faces** — green bounding boxes  
+❌ **Unknown Faces** — red bounding boxes  
+
+Each detection result is saved in the output folder:
+
